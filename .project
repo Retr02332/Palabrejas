@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Palabrejas</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>lib/commons-lang3-3.12.0.jar</name>
+			<type>1</type>
+			<location>/home/retr0/Descargas/commons-lang3-3.12.0.jar</location>
+		</link>
+		<link>
+			<name>lib/opencsv-5.4.jar</name>
+			<type>1</type>
+			<location>/home/retr0/Descargas/opencsv-5.4.jar</location>
+		</link>
+		<link>
+			<name>pdf/palabrejas.pdf</name>
+			<type>1</type>
+			<location>/home/retr0/Documentos/palabrejas.pdf</location>
+		</link>
+	</linkedResources>
+</projectDescription>
