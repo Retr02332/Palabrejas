@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"Palabrejas","l":"Controller"},{"p":"Palabrejas","l":"Game"},{"p":"Palabrejas","l":"Gui"},{"p":"Palabrejas","l":"HandlerCsv"},{"p":"Palabrejas","l":"HandlerFile"},{"p":"Palabrejas","l":"Player"}]

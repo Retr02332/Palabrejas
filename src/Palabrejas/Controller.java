@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * The Class Controller.
+ * La clase Controller, contiene toda la logica del juego.
  */
 public class Controller {
 	
