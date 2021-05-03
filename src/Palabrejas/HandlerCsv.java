@@ -9,8 +9,19 @@ import java.util.ArrayList;
 import java.io.FileReader;
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La clase HandlerCsv, es una interfaz para poder capturar las palabras almacenadas en un archivo .csv.
+ */
 public class HandlerCsv {
 
+    /**
+     * Obtener todas las palabras de un archivo .csv.
+     *
+     * @return Todas las palabras de un archivo .csv
+     * @throws IOException Se activa cuando hay un error de I/O.
+     * @throws CsvException, Se activa cuando hay un problema al leer el archivo .csv
+     */
     public List<String> getAllWordsFromCsvFile() throws IOException, CsvException {
     	
         String fileName = "src/Palabrejas/words.csv";

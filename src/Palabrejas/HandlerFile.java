@@ -7,14 +7,25 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Map;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La clase HandlerFile, tiene los atributos y metodos necesarios, para serializar y deserializar.
+ */
 public class HandlerFile {
 	
+	/** La ubicacion de la base de datos */
 	private final String database = "src/Palabrejas/database.ser";
 	private FileOutputStream fileOut;
 	private FileInputStream fileIn;
 	private ObjectOutputStream objectOut;
 	private ObjectInputStream objectIn;
 	
+	/**
+	 * Serializar.
+	 *
+	 * @param mapPlayers, Un HashMap que contiene los usuarios registrados en el juego.
+	 * @return Un booleano que indica si la operación se realizo con exito o no
+	 */
 	public Boolean writeObjectFile(Map mapPlayers) {
 		
 		try {
@@ -37,6 +48,11 @@ public class HandlerFile {
 		}
 	}
 	
+	/**
+	 * Deserializar.
+	 *
+	 * @return un HashMap que contiene los usuarios registrados en el juego
+	 */
 	public Map<String, Player> readObjectFile() {
 		
 		Map<String, Player> mapPlayers = null;

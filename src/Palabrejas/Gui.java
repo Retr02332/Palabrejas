@@ -31,6 +31,10 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.Timer;
 
+// TODO: Auto-generated Javadoc
+/**
+ * La clase Gui, contiene todo lo relacionado con el aspecto visual del juego.
+ */
 public class Gui extends JFrame {
 	
 	JPanel panelShowStadisticsAllPlayer;
@@ -66,6 +70,9 @@ public class Gui extends JFrame {
 	private int timeLimit = 0;
 	private int index = 0;
 	
+	/**
+	 * El constructor de la clase Gui.
+	 */
 	public Gui() {
 		initGui();
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,6 +90,9 @@ public class Gui extends JFrame {
 		this.setVisible(true);
 	}
 	
+	/**
+	 * Aqui se inicializan los componentes graficos con los cuales se trabajaran.
+	 */
 	public void initGui() {
 		
 		this.getContentPane().setLayout(new BorderLayout());
@@ -228,6 +238,17 @@ public class Gui extends JFrame {
         // add(panelShowStadisticsAllPlayer); Esto se hace en el controlador de eventos del boton "viewStadisticsOtherPlayers"
 	}
 	
+	/**
+	 * EL metodo Makeconstraints, se encaraga de construir un GridBagConstraints acorde a los requisitos asignados.
+	 *
+	 * @param gridx, La celda en el eje X
+	 * @param gridy, La celda en el eje Y
+	 * @param gridwidth, La cantidad de columnas que ocupa en el eje Y
+	 * @param gridheight, La cantidad de columnas que ocupa en el eje X
+	 * @param ipady, Pad asignado en el eje Y
+	 * @param fill, Si el objeto de desplegara completamente hacia un eje respectivo o no
+	 * @return, El objeto GridBagConstraints, listo para usarse en los componentes que lo requieran
+	 */
 	public GridBagConstraints makeConstraints(int gridx, int gridy, int gridwidth, int gridheight, int ipady, int fill) {
 		
 		GridBagConstraints constraints = new GridBagConstraints();
@@ -242,6 +263,9 @@ public class Gui extends JFrame {
 		return constraints;
 	}
 	
+	/**
+	 * Actualizar el estado de la interfaz (Gui).
+	 */
 	public void updateGUIStatus() {
 		if(isGameOver()) {
 			
@@ -267,6 +291,9 @@ public class Gui extends JFrame {
 		}
 	}
 	
+	/**
+	 * Cuenta regresiva (El tiempo que tiene el usuario para introducir las palabras.
+	 */
 	public void countDown() {
 		
 		ActionListener countdown=new ActionListener() {
@@ -289,6 +316,11 @@ public class Gui extends JFrame {
 		timerCountDown.start();
 	}
 	
+	/**
+	 * Desplegar las palabras del backend en la GUI.
+	 *
+	 * @param Una lista de palabras de backend a desplegar en la UI
+	 */
 	public void deployWords(List<String> words) {	
 		
 		ActionListener delay = new ActionListener() {
@@ -314,17 +346,33 @@ public class Gui extends JFrame {
 		timerDeployWords.start();
 	}
 	
+	/**
+	 * Remover todos los paneles.
+	 */
 	public void removeAllPanels() {
 		this.getContentPane().removeAll();
 		this.repaint();
 	}
 	
+	/**
+	 * Verificar si el usuario ha perdido la partida.
+	 *
+	 * @return Un booleano que identifica si el usuario perdio o no la partida.
+	 */
 	public Boolean isGameOver() {
 		return controller.getGameOver()? true:false;
 	}
 	
+	/**
+	 * La clase Listener, escucha los eventos de teclado en etiquetas y clicks a botones.
+	 */
 	private class Listener implements ActionListener, KeyListener {
 
+		/**
+		 * Action performed.
+		 *
+		 * @param eventActionPerformed, este evento detecta cualquier clickeo a botones provocado por el usuario
+		 */
 		@Override
 		public void actionPerformed(ActionEvent eventActionPerformed) {
 			
@@ -377,6 +425,11 @@ public class Gui extends JFrame {
 			}
 		}
 
+		/**
+		 * Key pressed.
+		 *
+		 * @param eventKeyPressed, este evento detecta cualquier tecla presionada por el usuario dentro de una entrada de texto.
+		 */
 		@Override
 		public void keyPressed(KeyEvent eventKeyPressed) {
 			if(eventKeyPressed.getKeyCode() == KeyEvent.VK_ENTER) {
@@ -392,10 +445,20 @@ public class Gui extends JFrame {
 			}
 		}
 
+		/**
+		 * Key released.
+		 *
+		 * @param eventKeyReleased, detecta si una tecla ha sido soltada
+		 */
 		@Override
 		public void keyReleased(KeyEvent eventKeyReleased) {
 		}
 
+		/**
+		 * Key typed.
+		 *
+		 * @param eventKeyTyped, detecta si una tecla esta siendo presionada
+		 */
 		@Override
 		public void keyTyped(KeyEvent eventKeyTyped) {
 		}
